@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import br.com.alinykelly.myfirstpokedex.R
+import br.com.alinykelly.myfirstpokedex.api.PokemonRepository
 import br.com.alinykelly.myfirstpokedex.domain.Pokemon
 import br.com.alinykelly.myfirstpokedex.domain.PokemonType
 
@@ -26,6 +27,8 @@ class MainActivity : AppCompatActivity() {
         val pokemons = listOf(
             charmander, charmander, charmander, charmander, charmander
         )
+
+        val pokemonsApi = PokemonRepository.listPokemons()
 
         val layoutManager = LinearLayoutManager(this)
         recyclerView.layoutManager = layoutManager
